@@ -1,4 +1,4 @@
-﻿import './style2.css';
+﻿import './style2.scss';
 
 const quadra = x => x*x;
 

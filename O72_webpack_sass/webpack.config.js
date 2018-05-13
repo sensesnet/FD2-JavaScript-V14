@@ -47,14 +47,6 @@ const config = {
             ]
         },
         {
-            test: /\.js$/, // как обрабатывать исходные js-файлы
-            include: path.resolve(__dirname, 'src'), // где находятся исходные файлы
-            loader: 'babel-loader',
-            options: {
-                presets: ['env', 'stage-0'] // аналог .babelrc 
-            }
-        }, 
-        {
             test: /\.css$/, // как обрабатывать исходные css-файлы
             include: path.resolve(__dirname, 'src'),
             use: ExtractTextPlugin.extract({

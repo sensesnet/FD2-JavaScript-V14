@@ -7,6 +7,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin  = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const extractSass = new ExtractTextPlugin({
+    filename: '[name].bundle.[contenthash].css',
+});
+
 const config = {
     // точка входа для процесса сборки
     entry: {
@@ -59,6 +63,22 @@ const config = {
             })
         },
         {
+            test: /\.scss$/,
+            exclude: [
+                path.resolve(__dirname, 'node_modules'),
+            ],
+            use: extractSass.extract({
+                use: [{
+                    loader: 'css-loader',
+                    options: { minimize:false }
+                }, {
+                    loader: 'sass-loader',
+                    options: {}
+                }],
+                fallback: 'style-loader'
+            })
+        },
+        {
             test: /\.(png|svg|jpg|gif)$/,
             use: [{
                 loader: 'file-loader',
@@ -73,6 +93,7 @@ const config = {
     },
     devtool: 'source-map',
     plugins: [
+        extractSass,
         new CleanWebpackPlugin(['dist'], { verbose: true }), // очищать /dist при сборке
         // неприемлемый способ - просто скопировать все изображения в /dist 
         // new CopyWebpackPlugin([{
