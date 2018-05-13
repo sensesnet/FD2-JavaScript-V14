@@ -71,6 +71,7 @@ const config = {
             }]
         }]
     },
+    devtool: 'source-map',
     plugins: [
         new CleanWebpackPlugin(['dist'], { verbose: true }), // очищать /dist при сборке
         // неприемлемый способ - просто скопировать все изображения в /dist 
@@ -85,8 +86,8 @@ const config = {
             filename: 'index.html', // имя
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src', 'about.html'),
-            filename: 'about.html' 
+            template: path.resolve(__dirname, 'src', 'hockey.html'),
+            filename: 'hockey.html' 
         }),
     ]
 }

@@ -1,10 +1,11 @@
 {
-  "name": "modules_example",
+  "name": "webpack_babel_example",
   "version": "1.0.0",
-  "description": "пример сборки модульного кода",
+  "description": "пример сборки с webpack и babel",
   "main": "main.js",
   "scripts": {
-    "build": ".\\node_modules\\.bin\\webpack"
+    "build": ".\\node_modules\\.bin\\webpack",
+    "browse": ".\\node_modules\\.bin\\lite-server"
   },
   "author": "",
   "license": "ISC",

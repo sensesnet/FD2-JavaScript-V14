@@ -1,10 +1,11 @@
 {
-  "name": "modules_example",
+  "name": "webpackdevserver_example",
   "version": "1.0.0",
-  "description": "пример сборки модульного кода",
+  "description": "пример сборки с webpack-dev-server",
   "main": "main.js",
   "scripts": {
     "build": ".\\node_modules\\.bin\\webpack",
+    "browse": ".\\node_modules\\.bin\\lite-server",
     "start": ".\\node_modules\\.bin\\webpack-dev-server --progress --colors --history-api-fallback"
   },
   "author": "",
