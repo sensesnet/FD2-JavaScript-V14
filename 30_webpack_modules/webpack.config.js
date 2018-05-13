@@ -77,8 +77,8 @@ const config = {
             filename: 'index.html', // имя
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src', 'about.html'),
-            filename: 'about.html' 
+            template: path.resolve(__dirname, 'src', 'hockey.html'),
+            filename: 'hockey.html' 
         }),
     ]
 }

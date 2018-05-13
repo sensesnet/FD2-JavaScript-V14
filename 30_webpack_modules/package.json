@@ -4,7 +4,8 @@
   "description": "пример сборки модульного кода",
   "main": "main.js",
   "scripts": {
-    "build": ".\\node_modules\\.bin\\webpack"
+    "build": ".\\node_modules\\.bin\\webpack",
+    "browse": ".\\node_modules\\.bin\\lite-server"
   },
   "author": "",
   "license": "ISC",
