@@ -63,6 +63,7 @@ const config = {
             }]
         }]
     },
+    devtool: 'source-map',
     plugins: [
         new CleanWebpackPlugin(['dist'], { verbose: true }), // очищать /dist при сборке
         // неприемлемый способ - просто скопировать все изображения в /dist 
