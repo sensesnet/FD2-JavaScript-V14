@@ -3,7 +3,7 @@
   <target-player>11.0</target-player>
   <benchmark>false</benchmark>
   <compiler>
-    <define val="3">
+    <define val="33">
       debug
     </define>
     <define val="5">
