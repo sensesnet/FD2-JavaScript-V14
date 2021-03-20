@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "ssri": "^5.2.4"
+    "ssri": "^8.0.1"
   }
 }
